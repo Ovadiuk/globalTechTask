@@ -1,0 +1,41 @@
+group 'FindFieldAndValueInJson'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+//create a single Jar with all dependencies
+task fatJar(type: Jar) {
+    manifest {
+        attributes 'Implementation-Title': 'Gradle Jar File Example',
+                'Implementation-Version': version,
+                'Main-Class': 'com/global/Main'
+    }
+    baseName = project.name + '-all'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+
+task cucumber(dependsOn: testClasses) {
+    doLast {
+        javaexec {
+            main = "cucumber.api.cli.Main"
+            classpath = configurations.testRuntimeClasspath + sourceSets.main.output + sourceSets.test.output
+            args = ['--plugin', 'pretty', '--glue', 'com.global', 'src/test/resources/features']
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+
+}
+
+dependencies {
+
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.5'
+    compile group: 'info.cukes', name: 'cucumber-java8', version: '1.2.5'
+    testCompile group: 'info.cukes', name: 'cucumber-junit', version: '1.2.5'
+
+}

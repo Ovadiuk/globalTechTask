@@ -1,0 +1,71 @@
+{
+  "customer":{
+
+    "fieldForTest":"test",
+    "firstName":"Dima",
+    "surname":"techTask",
+
+    "capture": {
+      "fieldForTest": "test",
+      "by": "customer"
+    },
+    "addresses":[
+      {
+        "fieldForTest":"test",
+        "firstName":"Dima",
+        "enrichments":{
+          "fieldForTest":"test",
+          "firstName":"Dima"
+          },
+          "paf":{
+            "fieldForTest":"test",
+            "firstName":"Dima"
+        }
+      },
+      {
+        "type":"addres2",
+        "subtype":"Main",
+        "lines":[
+          "White Street",
+          "Cornishpark",
+          "Greyisland"
+        ],
+        "townCity":"Glazgo",
+        "postcode":"SD6 JK2",
+        "county":"Devon",
+        "fieldForTest":"test",
+        "firstName":"Dima",
+        "contactable": "Y",
+        "country":"GB",
+        "enrichments":{
+          "cleansed":{
+            "lines":[
+              "WHITE STREET",
+              "CORNISHPARK",
+              "GREYISLAND"
+            ],
+            "postcode":"SD6JK2",
+            "country":"GB"
+          },
+          "paf":{
+            "organisation":"Caithness",
+            "subBuilding":"2/16-a",
+            "building":"3H",
+            "buildingNo":"1024",
+            "dependentStreet":"Black Str",
+            "street":"White",
+            "dependentLocality":"",
+            "locality":"East Beach",
+            "town":"Glazgo",
+            "county":"Devon",
+            "fieldForTest":"test2",
+            "firstName":"Dima",
+            "postcode":"SD6JK2"
+          }
+        }
+      }
+      ]
+      }
+
+
+}
