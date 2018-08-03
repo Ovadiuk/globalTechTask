@@ -6,14 +6,13 @@ Feature: find objects with value in json file
     Then User Provides FieldName "<fieldName>" and Value "<value>" after application should be find "<result>" Objects in this json file
     Examples:
       | path                                                                        |  fieldName          |value   | result    |
-      |     src/test/resources/examples/positive.json                               |   fieldForTest      |test    |  6        |
-      |     src/test/resources/examples/positive.json                               |   fieldForTest      |test2   |  1        |
+      |     src/test/resources/examples/positive.json                               |   fieldForTest      |test    |  2        |
       |     src/test/resources/examples/positive.json                               |   fieldForTest      |notExist|  0        |
       |     src/test/resources/examples/positive.json                               |   notExist          |test    |  0        |
       |     src/test/resources/examples/positive.json                               |   notExist          |notExist|  0        |
       |     src/test/resources/examples/empty.json                                  |   notExist          |notExist|  0        |
-      |     src/test/resources/examples/valuesIsEmpty.json                          |  fieldForTest       |        |  6        |
-      |     src/test/resources/examples/fieldsIsEmpty.json                          |                     |test    |  6        |
-      |     src/test/resources/examples/fieldNameAndValueContainsUniqueChar.json    |  fieldForTest¢      | test¢  |  6        |
-      |     src/test/resources/examples/booleen.json                                |  fieldForTest       | true   |  6        |
-      |     src/test/resources/examples/int.json                                    |  fieldForTest       | 1234   |  6        |
+      |     src/test/resources/examples/positive.json                               |  fieldForTest       |        |  1        |
+      |     src/test/resources/examples/positive.json                               |                     |        |  1        |
+      |     src/test/resources/examples/positive.json                               |  fieldForTest¢      | test¢  |  1        |
+      |     src/test/resources/examples/positive.json                               |  booleen            | true   |  1        |
+      |     src/test/resources/examples/positive.json                               |  int                | 1234   |  1        |

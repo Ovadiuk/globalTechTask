@@ -1,24 +1,21 @@
 {
   "customer":{
-
-    "fieldForTest":"test",
     "firstName":"Dima",
     "surname":"techTask",
-
     "capture": {
-      "fieldForTest": "test",
+      "fieldForTest":"test",
       "by": "customer"
     },
-    "addresses":[
+    "fieldForTest":[
       {
-        "fieldForTest":"test",
+        "booleen":true,
         "firstName":"Dima",
         "enrichments":{
-          "fieldForTest":"test",
+          "int":1234,
           "firstName":"Dima"
           },
           "paf":{
-            "fieldForTest":"test",
+            "fieldForTest":"",
             "firstName":"Dima"
         }
       },
@@ -33,7 +30,7 @@
         "townCity":"Glazgo",
         "postcode":"SD6 JK2",
         "county":"Devon",
-        "fieldForTest":"test",
+        "":"",
         "firstName":"Dima",
         "contactable": "Y",
         "country":"GB",
@@ -44,8 +41,10 @@
               "CORNISHPARK",
               "GREYISLAND"
             ],
+            "valueEmpty":"",
             "postcode":"SD6JK2",
-            "country":"GB"
+            "country":"GB",
+            "fieldForTest":"test"
           },
           "paf":{
             "organisation":"Caithness",
@@ -58,7 +57,7 @@
             "locality":"East Beach",
             "town":"Glazgo",
             "county":"Devon",
-            "fieldForTest":"test2",
+            "fieldForTest¢":"test¢",
             "firstName":"Dima",
             "postcode":"SD6JK2"
           }

@@ -1,15 +1,13 @@
 {
   "customer":{
 
-    "fieldForTest":"test",
     "firstName":"Dima",
     "surname":"techTask",
-
     "capture": {
       "fieldForTest": "test",
       "by": "customer"
     },
-    "addresses":[
+    "fieldForTest":[
       {
         "fieldForTest":"test",
         "firstName":"Dima",
@@ -58,7 +56,7 @@
             "locality":"East Beach",
             "town":"Glazgo",
             "county":"Devon",
-            "fieldForTest":"test2",
+            "fieldForTest":"test",
             "firstName":"Dima",
             "postcode":"SD6JK2"
           }
