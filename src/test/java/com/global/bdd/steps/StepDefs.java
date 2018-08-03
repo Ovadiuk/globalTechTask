@@ -17,12 +17,12 @@ public class StepDefs implements En {
 
         When ("^User Provides FieldName \"([^\"]*)\" after application should be find \"(\\d)\" Objects in this json file$",
                 (String fieldName,Integer result)->{
-            Assert.assertEquals((Integer) nodeFinder.getCountFindObjectsInJsonFile(fieldName),result);
+            Assert.assertEquals(result,(Integer) nodeFinder.getCountFindObjectsInJsonFile(fieldName));
         });
 
         Then ("^User Provides FieldName \"([^\"]*)\" and Value \"([^\"]*)\" after application should be find \"(\\d)\" Objects in this json file$",
                 (String fieldName,String value, Integer result)->{
-            Assert.assertEquals((Integer) nodeFinder.getCountFindObjectsInJsonFileWithValue(fieldName,value),result);
+            Assert.assertEquals(result,(Integer) nodeFinder.getCountFindObjectsInJsonFileWithValue(fieldName,value));
         });
 
     }
